@@ -15,18 +15,21 @@ Install the library using pip:
 
 Add 'sky_redirects' to INSTALLED_APPS in settings.py:
 
+```python
    INSTALLED_APPS = (
       'sky_redirects',
       ...
+```
 
 Add the sky_redirects middleware to the *beginning* of MIDDLEWARE_CLASSES in settings.py::
 
+```python
     MIDDLEWARE_CLASSES = [
       'sky_redirects.middleware.DomainRedirectMiddleware',
       'sky_redirects.middleware.RegexRedirectMiddleware',
       ...
    ]
-
+```
 
 Once you run syncdb, you will be ready to add redirects in the admin interface and you are done.
 
